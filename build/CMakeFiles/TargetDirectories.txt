@@ -1,0 +1,9 @@
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/skui2.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/edit_cache.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/rebuild_cache.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/list_install_components.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/install.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/install/local.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/install/strip.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/skui2_autogen_timestamp_deps.dir
+C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/CMakeFiles/skui2_autogen.dir

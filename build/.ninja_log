@@ -1,0 +1,21 @@
+# ninja log v6
+72	1330	7860756234439863	skui2_autogen/timestamp	e9d7d9015e2f855b
+72	1330	7860756234439863	skui2_autogen/mocs_compilation.cpp	e9d7d9015e2f855b
+72	1330	7860756234439863	C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/skui2_autogen/timestamp	e9d7d9015e2f855b
+72	1330	7860756234439863	C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/skui2_autogen/mocs_compilation.cpp	e9d7d9015e2f855b
+1443	5248	7860756236317652	CMakeFiles/skui2.dir/visual.cpp.obj	2b29735d542c2e14
+1331	1425	7860756236016890	C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/build/skui2_autogen/EWIEGA46WW/qrc_assets.cpp	149e050e9525b931
+1331	1425	7860756236016890	skui2_autogen/EWIEGA46WW/qrc_assets.cpp	149e050e9525b931
+1448	1564	7860756236373499	CMakeFiles/skui2.dir/outbound.cpp.obj	384ecee53da0afcb
+1484	1650	7860756236734048	CMakeFiles/skui2.dir/skui2_autogen/EWIEGA46WW/qrc_assets.cpp.obj	871f49dead13d20b
+1479	4893	7860756236688965	CMakeFiles/skui2.dir/skui.cpp.obj	93bbd5982e9149ab
+1468	4803	7860756236573561	CMakeFiles/skui2.dir/interfacehandler.cpp.obj	20f3db0177d3bc51
+1474	5362	7860756236638866	CMakeFiles/skui2.dir/visuals/slider.cpp.obj	67b1c8c89cec9579
+1453	5291	7860756236413604	CMakeFiles/skui2.dir/visuals/test.cpp.obj	2b420998723064a9
+1439	5709	7860756236277652	CMakeFiles/skui2.dir/document.cpp.obj	60dc5be557309edd
+1464	5509	7860756236529092	CMakeFiles/skui2.dir/viewport.cpp.obj	105f45d7eda9cc48
+1458	5882	7860756236474020	CMakeFiles/skui2.dir/resizeboundingbox.cpp.obj	bf270c8294ea3826
+1430	6012	7860756236192502	CMakeFiles/skui2.dir/main.cpp.obj	6087e458c3b49237
+1434	6368	7860756236237654	CMakeFiles/skui2.dir/mainwindow.cpp.obj	443a9c36cf5da506
+1425	6468	7860756236137205	CMakeFiles/skui2.dir/skui2_autogen/mocs_compilation.cpp.obj	b1acdd20b7ac892f
+6468	7174	7860756286569074	skui2.exe	8b453df55aa91077
