@@ -10,7 +10,6 @@ class Test : public Visual
     Q_OBJECT
 public:
     explicit Test(QWidget *parent = nullptr, unsigned int uid = 0);
-
 };
 
 #endif // TEST_H

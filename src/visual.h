@@ -1,16 +1,16 @@
 #ifndef VISUAL_H
 #define VISUAL_H
 
-#include <QWidget>
-#include <QLayout>
 #include <QDebug>
+#include <QLayout>
 #include <QLoggingCategory>
-#include <QString>
 #include <QMouseEvent>
-#include <QResizeEvent>
 #include <QMoveEvent>
 #include <QPoint>
+#include <QResizeEvent>
 #include <QSizeGrip>
+#include <QString>
+#include <QWidget>
 
 #include "interfacehandler.h"
 #include "resizeboundingbox.h"
@@ -23,8 +23,9 @@ const QEvent::Type VIEWPORT_HANDLED_ON_EDIT_MODE[] = {QEvent::MouseButtonPress,
                                                       QEvent::MouseButtonRelease,
                                                       QEvent::MouseMove};
 
-struct VisualContainer {
-    void* ptr;
+struct VisualContainer
+{
+    void *ptr;
     VisualType type;
 };
 
@@ -49,7 +50,8 @@ public slots:
 protected:
     QString info_name = "Base Class";
     QString info_class_name = "Visual";
-    QString info_description = "This class is the base for every visual. If you can see this, the base class is called without a child.";
+    QString info_description = "This class is the base for every visual. If you can see this, the "
+                               "base class is called without a child.";
 
     void setMinimumSize(QSize);
     void makeInterface(InterfaceInfo, InterfaceDirection);

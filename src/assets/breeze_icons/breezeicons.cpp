@@ -16,8 +16,7 @@ static void resourceInit()
     Q_INIT_RESOURCE(breeze_icons);
 }
 
-namespace BreezeIcons
-{
+namespace BreezeIcons {
 
 void initIcons()
 {
@@ -31,4 +30,4 @@ void initIcons()
     }
 }
 
-}
+} // namespace BreezeIcons

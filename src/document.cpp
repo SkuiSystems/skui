@@ -8,9 +8,7 @@ Document::Document(Viewport *viewport)
     this->viewport = viewport;
 }
 
-Document::~Document()
-{
-}
+Document::~Document() {}
 
 QJsonObject Document::save()
 {
@@ -22,7 +20,7 @@ void Document::load(QJsonObject content)
     return;
 }
 
-Visual* Document::createVisual(VisualType type)
+Visual *Document::createVisual(VisualType type)
 {
     VisualContainer container;
     container.type = type;
@@ -47,5 +45,5 @@ Visual* Document::createVisual(VisualType type)
         container.ptr = nullptr;
     }
 
-    return static_cast<Visual*>(container.ptr);
+    return static_cast<Visual *>(container.ptr);
 }

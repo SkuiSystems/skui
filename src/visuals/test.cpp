@@ -1,6 +1,7 @@
 #include "test.h"
 
-Test::Test(QWidget *parent, unsigned int uid) : Visual(parent, uid)
+Test::Test(QWidget *parent, unsigned int uid)
+    : Visual(parent, uid)
 {
     setGeometry(QRect(200, 200, 200, 200));
     setMinimumSize(QSize(200, 200));

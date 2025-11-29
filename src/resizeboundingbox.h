@@ -1,11 +1,11 @@
 #ifndef RESIZEBOUNDINGBOX_H
 #define RESIZEBOUNDINGBOX_H
 
-#include <QWidget>
-#include <QPainter>
-#include <QMouseEvent>
 #include <QCursor>
 #include <QMargins>
+#include <QMouseEvent>
+#include <QPainter>
+#include <QWidget>
 
 const int OUTER_HITBOX_SIZE = 10;
 const QMargins WIDGET_MARGIN(20, 20, 20, 20);
@@ -34,8 +34,8 @@ public:
     void setBoxMinimumSize(QSize);
 
 protected:
-    void mousePressEvent(QMouseEvent*) override;
-    void mouseMoveEvent(QMouseEvent*) override;
+    void mousePressEvent(QMouseEvent *) override;
+    void mouseMoveEvent(QMouseEvent *) override;
     void mouseReleaseEvent(QMouseEvent *) override;
 
     void paintEvent(QPaintEvent *) override;

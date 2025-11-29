@@ -1,8 +1,8 @@
 #ifndef DOCUMENT_H
 #define DOCUMENT_H
 
-#include <QObject>
 #include <QJsonObject>
+#include <QObject>
 
 #include "viewport.h"
 #include "visual.h"
@@ -21,14 +21,14 @@ public:
     QJsonObject save();
     void load(QJsonObject);
 
-    Visual* createVisual(VisualType type);
+    Visual *createVisual(VisualType type);
 
     DisplayMode display_mode = DisplayMode::Run;
 
 private:
     unsigned int visual_uid_count = 0;
-    QList <VisualContainer> visuals;
-    QList <Outbound> outbounds;
+    QList<VisualContainer> visuals;
+    QList<Outbound> outbounds;
 
     Viewport *viewport;
 };

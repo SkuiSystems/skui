@@ -15,8 +15,7 @@
  * This namespace contains utility functions to integrate the
  * Breeze icons into your application.
  */
-namespace BreezeIcons
-{
+namespace BreezeIcons {
 
 /**
  * Ensures the Breeze icon theme is available inside the :/icons resource folder
@@ -28,6 +27,6 @@ namespace BreezeIcons
  */
 BREEZEICONS_EXPORT void initIcons();
 
-}
+} // namespace BreezeIcons
 
 #endif
