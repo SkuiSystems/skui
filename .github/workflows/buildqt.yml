@@ -12,7 +12,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        qt_version: [6.6.0] # Change this to your desired Qt version
+        qt_version: [6.9.0]
         
     steps:
       - name: Checkout code
@@ -29,16 +29,14 @@ jobs:
         if: runner.os == 'Linux'
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libgl1-mesa-dev ninja-build
-          # Additional common dependencies for Qt6 on Linux:
-          # sudo apt-get install -y libxkbcommon-x11-0 libvulkan1
+          sudo apt-get install -y build-essential libgl1-mesa-dev ninja-build libxkbcommon-x11-0 libvulkan1
 
       - name: Configure CMake
         shell: bash
         run: |
-          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake -S ${{ github.workspace }}/src -B ${{ github.workspace }}/src/build -DCMAKE_BUILD_TYPE=Release
 
       - name: Build
         shell: bash
         run: |
-          cmake --build build --config Release
+          cmake --build ${{ github.workspace }}/src/build --config Release
