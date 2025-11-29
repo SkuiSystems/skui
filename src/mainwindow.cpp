@@ -28,15 +28,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
 void MainWindow::loadInsertVisualMenu()
 {
     const VisualMenuAction wrapped_actions[] = {{"Test", VisualType::Test},
                                                 {"Slider", VisualType::Slider}};
 
-    for(const VisualMenuAction &wraped_action : wrapped_actions){
+    for (const VisualMenuAction &wraped_action : wrapped_actions) {
         QAction *menu_insert_action = new QAction(wraped_action.name);
-        connect(menu_insert_action, &QAction::triggered, this, [this, wraped_action]{
+        connect(menu_insert_action, &QAction::triggered, this, [this, wraped_action] {
             Visual *visual = focus_document->createVisual(wraped_action.type);
             connect(this, &MainWindow::modeChanged, visual, &Visual::setMode);
         });
@@ -89,4 +88,3 @@ void MainWindow::on_mode_changed_button_clicked()
     }
     emit modeChanged(focus_document->display_mode);
 }
-

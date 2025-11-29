@@ -26,55 +26,56 @@ void ResizeBoundingBox::paintEvent(QPaintEvent *event)
     painter.setPen(Qt::blue);
     painter.drawRect(mapRectFromParent(box_geometry));
 
-    for(const QPoint center_positon : outerHitboxPositions()){
-        painter.fillRect(
-            mapRectFromParent(squareByCenter(center_positon, 6)),
-            QBrush(Qt::green, Qt::SolidPattern));
+    for (const QPoint center_positon : outerHitboxPositions()) {
+        painter.fillRect(mapRectFromParent(squareByCenter(center_positon, 6)),
+                         QBrush(Qt::green, Qt::SolidPattern));
     }
 
     // Debug: Show hitboxes (yellow) and geometry (red) of widget
-    for(const QRect hitbox : hitboxes()) {
+    for (const QRect hitbox : hitboxes()) {
         painter.setPen(Qt::yellow);
         painter.drawRect(mapRectFromParent(hitbox));
     }
     painter.setPen(Qt::red);
-    painter.drawRect(QRect(
-            mapFromParent(geometry().topLeft()),
-            geometry().size() + QSize(-1, -1)  // Shiriking size by 1, so that the the Rect will render inside the widget
-        ));
+    painter.drawRect(
+        QRect(mapFromParent(geometry().topLeft()),
+              geometry().size()
+                  + QSize(-1,
+                          -1) // Shiriking size by 1, so that the the Rect will render inside the widget
+              ));
 }
 
 QRect ResizeBoundingBox::mapRectFromParent(QRect geometry)
 {
-    return QRect(
-        mapFromParent(geometry.topLeft()),
-        geometry.size()
-        );
+    return QRect(mapFromParent(geometry.topLeft()), geometry.size());
 }
 
 QRect ResizeBoundingBox::squareByCenter(QPoint position, int length)
 {
-    return QRect(position.x() - length/2, position.y() - length/2, length, length);
+    return QRect(position.x() - length / 2, position.y() - length / 2, length, length);
 }
 
 QMap<DragDirection, QPoint> ResizeBoundingBox::outerHitboxPositions()
 {
-    return QMap<DragDirection, QPoint>({
-        {DragDirection::NorthWest, QPoint(box_geometry.topLeft())},
-        {DragDirection::North,     QPoint(box_geometry.left() + box_geometry.width() / 2, box_geometry.top())},
-        {DragDirection::NorthEast, QPoint(box_geometry.topRight())},
-        {DragDirection::East,      QPoint(box_geometry.right(), box_geometry.top() + box_geometry.height() / 2)},
-        {DragDirection::SouthEast, QPoint(box_geometry.bottomRight())},
-        {DragDirection::South,     QPoint(box_geometry.left() + box_geometry.width() / 2, box_geometry.bottom())},
-        {DragDirection::SouthWest, QPoint(box_geometry.bottomLeft())},
-        {DragDirection::West,      QPoint(box_geometry.left(), box_geometry.top() + box_geometry.height() / 2)}
-    });
+    return QMap<DragDirection, QPoint>(
+        {{DragDirection::NorthWest, QPoint(box_geometry.topLeft())},
+         {DragDirection::North,
+          QPoint(box_geometry.left() + box_geometry.width() / 2, box_geometry.top())},
+         {DragDirection::NorthEast, QPoint(box_geometry.topRight())},
+         {DragDirection::East,
+          QPoint(box_geometry.right(), box_geometry.top() + box_geometry.height() / 2)},
+         {DragDirection::SouthEast, QPoint(box_geometry.bottomRight())},
+         {DragDirection::South,
+          QPoint(box_geometry.left() + box_geometry.width() / 2, box_geometry.bottom())},
+         {DragDirection::SouthWest, QPoint(box_geometry.bottomLeft())},
+         {DragDirection::West,
+          QPoint(box_geometry.left(), box_geometry.top() + box_geometry.height() / 2)}});
 }
 
 QMap<DragDirection, QRect> ResizeBoundingBox::hitboxes()
 {
     QMap<DragDirection, QRect> hitboxes;
-    for(auto [direction, center_position] : outerHitboxPositions().asKeyValueRange()){
+    for (auto [direction, center_position] : outerHitboxPositions().asKeyValueRange()) {
         hitboxes[direction] = squareByCenter(center_position, OUTER_HITBOX_SIZE);
     }
 
@@ -86,8 +87,8 @@ QMap<DragDirection, QRect> ResizeBoundingBox::hitboxes()
 
 DragDirection ResizeBoundingBox::containesHitbox(QPoint position)
 {
-    for(auto [direction, hitbox] : hitboxes().asKeyValueRange()){
-        if(mapRectFromParent(hitbox).contains(position)){
+    for (auto [direction, hitbox] : hitboxes().asKeyValueRange()) {
+        if (mapRectFromParent(hitbox).contains(position)) {
             return direction;
         }
     }
@@ -96,7 +97,7 @@ DragDirection ResizeBoundingBox::containesHitbox(QPoint position)
 
 void ResizeBoundingBox::setHoverCursor(DragDirection direction)
 {
-    switch(direction) {
+    switch (direction) {
     case DragDirection::NorthWest:
     case DragDirection::SouthEast:
         setCursor(Qt::SizeFDiagCursor);
@@ -124,7 +125,7 @@ void ResizeBoundingBox::setHoverCursor(DragDirection direction)
 
 void ResizeBoundingBox::mouseMoveEvent(QMouseEvent *event)
 {
-    if(mouse_pressed) {
+    if (mouse_pressed) {
         QPointF delta = event->globalPosition() - last_global_position;
         last_global_position = event->globalPosition();
 
@@ -137,12 +138,12 @@ void ResizeBoundingBox::mouseMoveEvent(QMouseEvent *event)
 
 void ResizeBoundingBox::mousePressEvent(QMouseEvent *event)
 {
-    if(event->buttons() == Qt::LeftButton){
+    if (event->buttons() == Qt::LeftButton) {
         mouse_pressed = true;
         last_global_position = event->globalPosition();
         last_geometry = geometry();
 
-        if(active_direction == DragDirection::Center) {
+        if (active_direction == DragDirection::Center) {
             setCursor(Qt::ClosedHandCursor);
         }
     }

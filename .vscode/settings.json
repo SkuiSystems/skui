@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/src"
+    "cmake.sourceDirectory": "C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/src",
+    "editor.formatOnSave": true
 }

@@ -115,8 +115,7 @@ void Visual::logInitiation()
     qInfo(visual) << QString("Initiated '%1'(%2) at 0x%3")
                          .arg(info_class_name)
                          .arg(QString::number(uid))
-                         .arg(reinterpret_cast<quintptr>(this), QT_POINTER_SIZE * 2, 16, QChar('0')
-                              );
+                         .arg(reinterpret_cast<quintptr>(this), QT_POINTER_SIZE * 2, 16, QChar('0'));
 }
 
 // In Edit Mode all events in VIEWPORT_HANDLED_ON_EDIT_MODE need to get handled by the Viewport
