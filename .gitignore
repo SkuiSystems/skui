@@ -76,4 +76,4 @@ CMakeLists.txt.user*
 .pch/
 .rcc/
 .uic/
-src/build*/
+build*/
