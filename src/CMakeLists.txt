@@ -17,16 +17,14 @@ qt_add_executable(skui2
     document.h document.cpp
 
     visual.h visual.cpp
-    outbound.h outbound.cpp
     visuals/test.h visuals/test.cpp
     resizeboundingbox.h resizeboundingbox.cpp
     panel.h panel.cpp
     assets.qrc
-    interfacehandler.h interfacehandler.cpp
     visuals/slider.h visuals/slider.cpp
     skuievent.h
     skui.h skui.cpp
-
+    node.h
 )
 
 target_link_libraries(skui2
