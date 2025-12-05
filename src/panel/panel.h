@@ -8,7 +8,6 @@
 #include <QRubberBand>
 #include <QWidget>
 
-#include "skuievent.h"
 #include "visual.h"
 
 enum class AlignDirection { Top, Right, Bottom, Left, Horizontal, Vertical };

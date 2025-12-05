@@ -1,4 +1,14 @@
 {
-    "cmake.sourceDirectory": "C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2/src",
-    "editor.formatOnSave": true
+    "cmake.sourceDirectory": "C:/Users/kalle/OneDrive/Workspace/Programmieren/skui2",
+    "editor.formatOnSave": true,
+    "files.associations": {
+        "*.cps": "javascript",
+        "charconv": "cpp",
+        "ratio": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    }
 }
