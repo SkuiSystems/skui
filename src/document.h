@@ -8,8 +8,6 @@
 #include "visual.h"
 #include "visuals/test.h"
 
-#include "outbound.h"
-
 class Document : QObject
 {
     Q_OBJECT
@@ -28,7 +26,6 @@ public:
 private:
     unsigned int visual_uid_count = 0;
     QList<VisualContainer> visuals;
-    QList<Outbound> outbounds;
 
     Panel *panel;
 };

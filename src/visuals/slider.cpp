@@ -20,8 +20,6 @@ Slider::Slider(QWidget *parent, unsigned int uid)
     m_slider->show();
 
     int value = 1;
-
-    OUTPUT_INTERFACE(0, value);
 }
 
 bool Slider::eventFilter(QObject *object, QEvent *event)

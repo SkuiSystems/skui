@@ -12,7 +12,6 @@
 #include <QString>
 #include <QWidget>
 
-#include "interfacehandler.h"
 #include "resizeboundingbox.h"
 
 enum class DisplayMode { Run, Edit };
@@ -54,7 +53,6 @@ protected:
                                "base class is called without a child.";
 
     void setMinimumSize(QSize);
-    void makeInterface(InterfaceInfo, InterfaceDirection);
 
     bool checkForParentHandling(QEvent *);
 
