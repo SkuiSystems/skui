@@ -10,9 +10,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    panel = new Panel(ui->centralwidget);
-
-    ui->centralwidget->layout()->addWidget(panel);
+    panel = new Panel;
+    ui->tabWidget->addTab(panel, "Panel");
 
     focus_document = new Document(panel);
 
