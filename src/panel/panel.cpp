@@ -158,7 +158,6 @@ void Panel::mousePressEvent(QMouseEvent *event)
 
 void Panel::mouseMoveEvent(QMouseEvent *event)
 {
-    qDebug() << origin;
     if (display_mode == DisplayMode::Edit) {
         rubber_band->setGeometry(QRect(origin, event->pos()).normalized());
     }
