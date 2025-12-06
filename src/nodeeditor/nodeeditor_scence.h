@@ -3,6 +3,8 @@
 
 #include <QGraphicsScene>
 
+#include "node_graphicsitem.h"
+
 class NodeEditorScence : public QGraphicsScene
 {
     Q_OBJECT
